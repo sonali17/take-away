@@ -31,7 +31,7 @@ loc = $(".form-control option:selected").val();
     console.log(loc);
     localStorage.setItem("location", loc);
     window.location.href = "file:///C:/Users/Sonali/Desktop/p3/second_page.html";
-  
+
 
 });
 
@@ -52,6 +52,27 @@ for (i = 0; i < b.length; i++) {
 error: function() {
  console.log("Cuisine Error");
 }
+});
+
+cart_value =0;
+dish_count1 = 0;
+
+$("#add1").click(function(){
+  document.getElementById("qty").value++;
+  dish_count1 = parseInt(document.getElementById("qty").value);
+  cart_value =dish_count1*100;
+  console.log(000);
+});
+
+$("#subt1").click(function(){
+    currrent_value =  parseInt(document.getElementById("qty").value);
+    if (currrent_value < 1) {
+        b=11
+    } else {
+        document.getElementById("qty").value--;
+    }
+    dish_count1 = parseInt(document.getElementById("qty").value);
+    cart_value =dish_count1*100;
 });
 
 });
