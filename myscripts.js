@@ -31,7 +31,7 @@ loc = $(".form-control option:selected").val();
 
     console.log(loc);
     localStorage.setItem("location", loc);
-    window.location.href = "file:///C:/Users/Sonali/Desktop/p3/second_page.html";
+    window.location.href = "second_page.html";
 
 
 });
@@ -65,6 +65,7 @@ $("#add1").click(function(){
   cart_value =dish_count1*100;
   localStorage.setItem("burger value", cart_value);
   localStorage.setItem("burger count", dish_count1);
+  total+=cart_value;
   console.log(000);
 });
 
@@ -79,6 +80,7 @@ $("#subt1").click(function(){
     cart_value =dish_count1*100;
     localStorage.setItem("burger value", cart_value);
     localStorage.setItem("burger count", dish_count1);
+    total+=cart_value;
 });
 
 // calculating cart value and quantity of pizza
@@ -91,6 +93,7 @@ $("#add2").click(function(){
   cart_value1 =dish_count2*500;
   localStorage.setItem("pizza value", cart_value1);
   localStorage.setItem("pizza count", dish_count2);
+  total+=cart_value1;
   console.log(000);
 });
 
@@ -105,6 +108,7 @@ $("#subt2").click(function(){
     cart_value1 =dish_count2*500;
     localStorage.setItem("pizza value", cart_value1);
     localStorage.setItem("pizza count", dish_count2);
+    total+=cart_value1;
 });
 
 // calculating cart value and quantity of chicken
@@ -117,6 +121,7 @@ $("#add3").click(function(){
   cart_value2 =dish_count3*600;
   localStorage.setItem("chicken value", cart_value2);
   localStorage.setItem("chicken count", dish_count3);
+  total+=cart_value2;
   console.log(000);
 });
 
@@ -131,6 +136,7 @@ $("#subt3").click(function(){
     cart_value2 =dish_count3*600;
     localStorage.setItem("chicken value", cart_value2);
     localStorage.setItem("chicken count", dish_count3);
+    total+=cart_value2;
 });
 
 // calculating cart value and quantity of fish
@@ -143,6 +149,7 @@ $("#add4").click(function(){
   cart_value3 =dish_count4*650;
   localStorage.setItem("fish value", cart_value3);
   localStorage.setItem("fish count", dish_count4);
+  total+=cart_value3;
   console.log(000);
 });
 
@@ -157,10 +164,13 @@ $("#subt4").click(function(){
     cart_value3 =dish_count4*650;
     localStorage.setItem("fish value", cart_value3);
     localStorage.setItem("fish count", dish_count4);
+    total+=cart_value3;
 });
 
 // to represent data in cart table
-   
+   $(cartIcon).click(function(){
+
+   });
   
 
 });
