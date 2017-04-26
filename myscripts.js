@@ -168,8 +168,40 @@ $("#subt4").click(function(){
 });
 
 // to represent data in cart table
-   $(cartIcon).click(function(){
+   $(".cartIcon").click(function(){
+        var td1 = $('<td></td>').text(localStorage.getItem('burger count'));
+        var td2 = $('<td></td>').text(100);
+        var td3 = $('<td></td>').text(localStorage.getItem('burger value'));
+        var tableRow = $('<tr><td>Burger</td></tr>').append(td1, td2, td3);
+        $('.table-heading').after(tableRow);
+   
+   
+        var td4 = $('<td></td>').text(localStorage.getItem('pizza count'));
+        var td5 = $('<td></td>').text(500);
+        var td6 = $('<td></td>').text(localStorage.getItem('pizza value'));
+        var tableRow1 = $('<tr><td>Pizza</td></tr>').append(td4, td5, td6);
+        $('.table-heading').after(tableRow1);
 
+        var td7 = $('<td></td>').text(localStorage.getItem('chicken count'));
+        var td8 = $('<td></td>').text(600);
+        var td9 = $('<td></td>').text(localStorage.getItem('chicken value'));
+        var tableRow2 = $('<tr><td>Chicken</td></tr>').append(td7, td8, td9);
+        $('.table-heading').after(tableRow2);
+
+        var td10 = $('<td></td>').text(localStorage.getItem('fish count'));
+        var td11 = $('<td></td>').text(650);
+        var td12 = $('<td></td>').text(localStorage.getItem('fish value'));
+        var tableRow3 = $('<tr><td>Fish</td></tr>').append(td10, td11, td12);
+        $('.table-heading').after(tableRow3);
+
+        var t1=(parseInt)(localStorage.getItem('burger value'));
+        var t2=(parseInt)(localStorage.getItem('pizza value'));
+        var t3=(parseInt)(localStorage.getItem('chicken value'));
+        var t4=(parseInt)(localStorage.getItem('fish value'));
+        total=t1+t2+t3+t4;
+
+        var tableRow4=$('<td></td>').append(total);
+        $('.total-amount').after(tableRow4);
    });
   
 
