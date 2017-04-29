@@ -14,6 +14,8 @@ error: function() {
 }
 });
 
+
+
 total=0;
 cart_value =0;
 dish_count1 = 0;

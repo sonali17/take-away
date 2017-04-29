@@ -35,4 +35,7 @@ loc = $(".form-control option:selected").val();
 
 });
 
+
+
+
 });
