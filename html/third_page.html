@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+  <html>
+	<head>
+		<title>Food Ordering website</title>
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+		<link rel="icon" href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQbqoJE2o2Y9YXm_BtAF072bubu7q6db512gUISmSgCTV_GOjYzyw" type="image/x-icon">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/third_page.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javaScript" src="../js/third_page.js"></script>
+	</head>
+	<body>
+	   <header>
+	   	     <nav class="navbar  navbar-inverse navbar-fixed-top">
+	   	      <div class="row">
+	   	      	  <div class="col-md-4 col-xs-4">
+	   	      	  	  <h1 class="second_title"></h1>
+	   	      	  </div>
+	   	      	  <div class="col-md-4 col-xs-4">
+	   	      	  	  <h2 class="second_title">Take Away</h2>
+	   	      	  </div>
+	   	      	  <div class="col-md-4 col-xs-4" style="padding-top: 10px;">
+	   	      	  	  <button type="button" class="btn btn-primary btn-lg cartIcon" data-toggle="modal" data-target="#myModal" style="width: 99px; padding-left: 5px;">
+						<div class = "col-md-6 col-md-offset-3 " style="margin-left: 5px;"><img class = "cart-icon" src = "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTldp8foyR-5_H1uUxZVj541kaf-trCx8oXiloDWctSLoYnzs82" style=" width: 50px; padding-right: 0px;">
+						</div>
+					</button>
+				  </div>
+          </nav>
+	   </header>
+	   <!-- Modal for cart starts -->
+			<div id="myModal" class="modal fade" role="dialog">
+		  		<div class="modal-dialog">
+
+			    	<!-- Modal content-->
+			    	<div class="modal-content">
+				     	<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="exampleInputEmail1" style="padding-right: 520px;">Name</label>
+									<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name" required="required">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1" style="padding-right: 470px;">Email address</label>
+									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required="required">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1" style="padding-right: 460px;">Phone number</label>
+									<input type="number" class="form-control" id="exampleInputPassword1" placeholder="phone number" required="required">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputAddress1" style="padding-right: 470px;">Enter Address</label>
+									<textarea class="form-control" rows="3" placeholder="Enter Address" required="required"></textarea>
+								</div>
+
+
+								<table class="table">
+									<tr class="table-heading">
+										<td>item</td>
+										<td>Quantity</td>
+										<td>Price</td>
+										<td>Amount</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="total-amount" style="text-align: right;">Total Amount</td>
+								    </tr>
+								</table>
+
+								<div class="modal-footer">
+				      				<button type="submit" data-toggle="modal" data-target="#payModal" class="pay-button btn btn-default pull-right">Pay</button>
+				        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      			</div>
+							</form>
+				     	</div>
+			    	</div>
+		 		</div>
+			</div>
+
+
+
+			<div class="modal fade" id="payModal" role="dialog">
+			    <div class="modal-dialog1">
+			      <!-- Modal content-->
+				    <div class="modal-content">
+	       				 	<p class="order-place"><h3>Your order has been placed successfully!</h3></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal for cart ends -->
+
+	    <div class="row list_of_cuisine">
+	        <div class="col-md-12 col-xs-12 label1">
+	    	<label>List Of Cuisines</label>
+	    	</div>
+	    	<div class="col-md-4 col-xs-12 cuisine_dropdown">
+	    		<form>
+                     <div class="form-group">
+                            <select class="form-control list cuisine_list" id="sel1">
+                                     <option class="cuisine_option" value="" disabled="disabled" selected="selected">Choose Any Cuisine</option>
+                            </select>
+                     </div>
+                 </form>
+	    	</div>
+	    	<div class="col-md-4"></div>
+	    </div>
+	    <div class="row" style="padding-bottom: 10px;">
+	    	<div class="col-md-6 col-xs-12">
+	    		<img src="https://images.pexels.com/photos/29302/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb" class="cuisine_img">
+	    		<div class="col-md-4 col-xs-6">
+	    		<p class="product-name" style="font-size: 25px; padding-top: 10px;">Burger</p>
+	    		</div>
+	    		<div class="col-md-2 col-xs-6"><p class="price" style="padding-top: 15px; font-size: 20px;">Rs.100</p></div>
+	    		<div class="col-md-6 ">
+	    			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGeViPXRQiXxgt1ACPfsCzVOYNRu1j8jxxa2_kz14_tR4pJUa2vA" class="veg-nonveg">
+	    		</div>
+	    		<form name="f1">
+	    		     <input type='button' name='subtract' id="subt1" value='-'/>
+			         <input type='text' name='qty' value=0 id='qty' style="width: 50px; text-align: center;" />
+                     <input type='button' name='add' id="add1"   value='+'/>
+
+		        </form>
+	    	</div>
+	    	<div class="col-md-6 col-xs-12">
+	    		<img src="https://images.pexels.com/photos/162918/pizza-cheese-margarita-homemade-162918.jpeg?h=350&auto=compress&cs=tinysrgb" style="border-radius: 20px;" class="cuisine_img">
+	    		<div class="col-md-4 col-xs-6">
+	    		<p class="product-name" style="font-size: 25px; padding-top: 10px;">Pizza</p>
+	    		</div>
+	    		<div class="col-md-2 col-xs-6"><p class="price" style="padding-top: 15px; font-size: 20px;">Rs.500</p></div>
+	    		<div class="col-md-6 ">
+	    			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGeViPXRQiXxgt1ACPfsCzVOYNRu1j8jxxa2_kz14_tR4pJUa2vA" class="veg-nonveg">
+	    		</div>
+	    		<form name="f1">
+	    		     <input type='button' name='subtract' id="subt2" value='-'/>
+			         <input type='text' name='qty1' id='qty1' value=0 style="width: 50px; text-align: center;" />
+                     <input type='button' name='add' id="add2" value='+'/>
+
+		        </form>
+	    	</div>
+	    </div>
+	    <div class="row" style="padding-bottom: 10px;">
+	    	<div class="col-md-6 col-xs-12">
+	    		<img src="https://images.pexels.com/photos/265393/pexels-photo-265393.jpeg?h=350&auto=compress&cs=tinysrgb" style="border-radius: 20px;" class="cuisine_img">
+	    		<div class="col-md-4 col-xs-6">
+	    		<p class="product-name" style="font-size: 25px; padding-top: 10px;">Chicken</p>
+	    		</div>
+	    		<div class="col-md-2 col-xs-6"><p class="price" style="padding-top: 15px; font-size: 20px;">Rs.600</p></div>
+	    		<div class="col-md-6 ">
+	    			<img src="http://www.chefsomsharma.in/resources/nonvegicon.png?timestamp=1411714418914" class="veg-nonveg">
+	    		</div>
+	    		<form name="f1">
+	    		     <input type='button' name='subtract' id="subt3" value='-'/>
+			         <input type='text' name='qty2' id='qty2' value=0 style="width: 50px; text-align: center;" />
+                     <input type='button' name='add' id="add3" value='+'/>
+
+		        </form>
+	    	</div>
+	    	<div class="col-md-6 col-xs-12">
+	    		<img src="https://images.pexels.com/photos/8758/food-dinner-lemon-rice.jpg?h=350&auto=compress&cs=tinysrgb" style="border-radius: 20px;" class="cuisine_img">
+	    		<div class="col-md-4 col-xs-6">
+	    		<p class="product-name" style="font-size: 25px; padding-top: 10px;">Fish</p>
+	    		</div>
+	    		<div class="col-md-2 col-xs-6"><p class="price" style="padding-top: 15px; font-size: 20px;">Rs.650</p></div>
+	    		<div class="col-md-6 ">
+	    			<img src="http://www.chefsomsharma.in/resources/nonvegicon.png?timestamp=1411714418914" class="veg-nonveg">
+	    		</div>
+	    		<form name="f1">
+	    		     <input type='button' name='subtract' id="subt4" value='-'/>
+			         <input type='text' name='qty3' id='qty3' value=0 style="width: 50px; text-align: center;" />
+                     <input type='button' name='add' id="add4" value='+'/>
+
+		        </form>
+	    	</div>
+	    </div>
+	    <footer>
+		    <div class="row">
+		         <div class="col-md-4"></div>
+		         <div class="col-md-4">
+		         <p class="contact_us">CONTACT US</p>
+		         </div>
+		         <div class="col-md-4"></div>
+		    </div>
+			<div class="row footer">
+				<div class="col-md-4 follow-us">
+					<p>
+						Follow us on<br><br>+91-7821980650<br><br>sonaagarwal.agarwal1@gmail.com
+					</p>
+					<br>
+					<a class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook" style="font-size:50px;"></span></a>
+                    <a class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter" style="font-size:50px"></span></a>
+				</div>
+				<div class="col-md-4 footer-location">
+				    <br>
+					<p>
+						Location<br><br>38-B Ganesh Nagar Mansarovar<br><br> Jaipur
+					</p>
+				</div>
+				<div class="col-md-4 hours">
+				    <br>
+					<p>
+						Hours<br><br>M-Sat 5pm-11pm<br><br>Sun 11am-11pm
+					</p>
+				</div>
+			</div>
+			<div class="row">
+			    <div class="col-md-4"></div>
+			    <div class="col-md-4">
+				<ul class="pagination">
+                     <li><a href="../html/sonali.html">1</a></li>
+                     <li><a href="../html/second_page.html">2</a></li>
+                     <li><a href="../html/third_page.html">3</a></li>
+                     
+                </ul>
+                </div>
+                <div class="col-md-4"></div>
+			</div>
+		</footer>
+	 </body>
+</html>
