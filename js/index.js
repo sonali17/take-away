@@ -30,7 +30,7 @@ loc = $(".form-control option:selected").val();
 
     console.log(loc);
     localStorage.setItem("location", loc);
-    window.location.href = "second_page.html";
+    window.location.href = "../html/second_page.html";
 
 
 });
